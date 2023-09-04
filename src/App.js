@@ -1,8 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Jobs API</h1>
-    </div>
+    <>
+      <div>
+        <h1>Navbar</h1>
+      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div><h1>Jobs Data</h1></div>
+          }
+        />
+      </Routes>
+    </>
   );
 }
 
