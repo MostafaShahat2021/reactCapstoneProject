@@ -25,3 +25,58 @@
   justify-content:right;
   gap: 1rem;
 }
+
+h1, h3 {
+  /* border: 1px solid red; */
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+}
+
+span {
+  padding: 1rem;
+}
+
+.cards {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content:center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  /* margin: 20px; */
+  width: 45%;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.card-description {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #666;
+}

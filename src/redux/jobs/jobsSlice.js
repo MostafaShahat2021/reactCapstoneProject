@@ -29,8 +29,12 @@ const jobsSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(getJobs.fulfilled, (state, action) => {
-        state.status = 'success';
-        state.jobs.concat(action.payload);
+        const jobsList = action.payload;
+        return ({
+          ...state,
+          jobs: jobsList,
+          status: 'success',
+        });
       })
       .addCase(getJobs.rejected, (state, action) => {
         state.status = 'failed';
