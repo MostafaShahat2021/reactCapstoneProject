@@ -1,19 +1,18 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { getJobs } from './redux/jobs/jobsSlice';
+import Header from './components/Header';
+// import { getJobs } from './redux/jobs/jobsSlice';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getJobs());
+    // dispatch(getJobs());
   }, [dispatch]);
   return (
     <>
-      <div>
-        <h1>Navbar</h1>
-      </div>
+      <Header />
       <Routes>
         <Route
           path="/"
