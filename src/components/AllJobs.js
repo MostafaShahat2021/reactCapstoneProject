@@ -32,10 +32,10 @@ function AllJobs() {
         onChange={(e) => handleSearch(e)}
       />
       <div className="cards">
-        {filterJobs.map((job) => (
-          <div className="card" key={job.id}>
+        {filterJobs.map((job, index) => (
+          <div className={`card ${index % 4 === 0 || index % 4 === 3 ? 'blue' : 'light-blue'}`} key={job.id}>
             <img
-              src={job?.company_logo}
+              src={job.company_logo}
               alt={job.title}
               className="card-image"
             />
