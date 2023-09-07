@@ -12,6 +12,8 @@ function AllJobs() {
     const searchValue = e.target.value;
     setSearch(searchValue);
   };
+
+  const filterJobs = jobs.filter((job) => job.title.toLowerCase().includes(search.toLowerCase()));
   return (
     <>
       <h1>Remotive jobs</h1>
@@ -30,7 +32,7 @@ function AllJobs() {
         onChange={(e) => handleSearch(e)}
       />
       <div className="cards">
-        {jobs.map((job) => (
+        {filterJobs.map((job) => (
           <div className="card" key={job.id}>
             <img
               src={job?.company_logo}
