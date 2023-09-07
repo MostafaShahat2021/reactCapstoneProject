@@ -59,7 +59,6 @@ function AllJobs() {
                 }}
                 to="/details"
               >
-                {/* View Details */}
                 <FaChevronCircleRight className="FaAngleRight" />
               </Link>
             </div>
