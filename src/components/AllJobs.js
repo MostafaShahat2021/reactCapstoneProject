@@ -23,11 +23,11 @@ function AllJobs() {
           alt="logo"
           className="card-image"
         />
-        <h3>
-          Remote Jobs Avilabele
-          <span>{jobs.length}</span>
-        </h3>
       </main>
+      <h3>
+        Remote Jobs Avilabele
+        <span>{jobs.length}</span>
+      </h3>
       <input
         className="search"
         type="text"

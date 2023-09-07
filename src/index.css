@@ -54,8 +54,8 @@ font-family: 'Roboto', sans-serif;
 .hero {
   /* border: 1px solid red; */
   background-color: rgb(65, 102, 174);
-  width: 75%;
-  height: 40vh;
+  width: 90%;
+  height: 35vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,10 +66,10 @@ font-family: 'Roboto', sans-serif;
 h1,
 h3 {
   /* border: 1px solid red; */
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
   /* margin: 1rem; */
-  margin: 0 auto;
+  margin: 1rem;
 }
 
 span {
