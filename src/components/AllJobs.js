@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { FaAngleRight } from 'react-icons/fa';
+import { FaChevronCircleRight } from 'react-icons/fa';
 
 function AllJobs() {
   const jobs = useSelector((state) => state.jobs.jobs);
@@ -60,7 +60,7 @@ function AllJobs() {
                 to="/details"
               >
                 {/* View Details */}
-                <FaAngleRight className="FaAngleRight" />
+                <FaChevronCircleRight className="FaAngleRight" />
               </Link>
             </div>
           </article>
