@@ -7,7 +7,7 @@ const initialState = {
   error: null,
 };
 
-const baseUrl = 'https://remotive.com/api/remote-jobs';
+const baseUrl = 'https://remotive.com/api/remote-jobs?limit=100';
 
 export const getJobs = createAsyncThunk('jobs/getJobs', async () => {
   try {
