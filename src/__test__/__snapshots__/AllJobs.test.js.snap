@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllJobs component render correctly 1`] = `
+Array [
+  <main
+    className="hero"
+  >
+    <h1>
+      Remotive jobs
+    </h1>
+    <img
+      alt="logo"
+      className="card-image"
+      src="https://camo.githubusercontent.com/5a759c5f7640123e386607aea7890caf84fb7ce9f2a0888407e0d218cc86bf82/68747470733a2f2f72656d6f746976652e636f6d2f6c6f676f"
+    />
+  </main>,
+  <h3>
+    Remote Jobs Avilabele
+    <span>
+      0
+    </span>
+  </h3>,
+  <input
+    className="search"
+    onChange={[Function]}
+    placeholder="Search jobs"
+    role="searchbox"
+    type="text"
+    value=""
+  />,
+  <section
+    className="cards"
+  />,
+]
+`;
