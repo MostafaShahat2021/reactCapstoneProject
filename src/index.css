@@ -51,12 +51,25 @@ font-family: 'Roboto', sans-serif;
   gap: 1rem;
 }
 
+.hero {
+  /* border: 1px solid red; */
+  background-color: rgb(65, 102, 174);
+  width: 75%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 h1,
 h3 {
   /* border: 1px solid red; */
   width: 100%;
   text-align: center;
   /* margin: 1rem; */
+  margin: 0 auto;
 }
 
 span {

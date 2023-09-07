@@ -16,13 +16,18 @@ function AllJobs() {
   const filterJobs = jobs.filter((job) => job.title.toLowerCase().includes(search.toLowerCase()));
   return (
     <>
-      <h1>Remotive jobs</h1>
-      <h3>
-        Remote Jobs Avilabele
-        <span>
-          {jobs.length}
-        </span>
-      </h3>
+      <main className="hero">
+        <h1>Remotive jobs</h1>
+        <img
+          src="https://camo.githubusercontent.com/5a759c5f7640123e386607aea7890caf84fb7ce9f2a0888407e0d218cc86bf82/68747470733a2f2f72656d6f746976652e636f6d2f6c6f676f"
+          alt="logo"
+          className="card-image"
+        />
+        <h3>
+          Remote Jobs Avilabele
+          <span>{jobs.length}</span>
+        </h3>
+      </main>
       <input
         className="search"
         type="text"
@@ -31,9 +36,14 @@ function AllJobs() {
         value={search}
         onChange={(e) => handleSearch(e)}
       />
-      <div className="cards">
+      <section className="cards">
         {filterJobs.map((job, index) => (
-          <div className={`card ${index % 4 === 0 || index % 4 === 3 ? 'blue' : 'light-blue'}`} key={job.id}>
+          <article
+            className={`card ${
+              index % 4 === 0 || index % 4 === 3 ? 'blue' : 'light-blue'
+            }`}
+            key={job.id}
+          >
             <img
               src={job.company_logo}
               alt={job.title}
@@ -53,9 +63,9 @@ function AllJobs() {
                 <FaAngleRight className="FaAngleRight" />
               </Link>
             </div>
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
     </>
   );
 }
