@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FaAngleRight } from 'react-icons/fa';
@@ -6,7 +6,12 @@ import { FaAngleRight } from 'react-icons/fa';
 function AllJobs() {
   const jobs = useSelector((state) => state.jobs.jobs);
   // console.log(jobs);
+  const [search, setSearch] = useState('');
 
+  const handleSearch = (e) => {
+    const searchValue = e.target.value;
+    setSearch(searchValue);
+  };
   return (
     <>
       <h1>Remotive jobs</h1>
@@ -16,6 +21,14 @@ function AllJobs() {
           {jobs.length}
         </span>
       </h3>
+      <input
+        className="search"
+        type="text"
+        role="searchbox"
+        placeholder="Search jobs"
+        value={search}
+        onChange={(e) => handleSearch(e)}
+      />
       <div className="cards">
         {jobs.map((job) => (
           <div className="card" key={job.id}>
