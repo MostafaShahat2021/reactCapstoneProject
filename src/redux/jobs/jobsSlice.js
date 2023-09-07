@@ -12,7 +12,6 @@ const baseUrl = 'https://remotive.com/api/remote-jobs?limit=100';
 export const getJobs = createAsyncThunk('jobs/getJobs', async () => {
   try {
     const res = await axios.get(baseUrl);
-    // return console.log(res.data.jobs);
     return res.data.jobs;
   } catch (error) {
     throw new Error('failed to fetch jobs data');

@@ -5,7 +5,7 @@ import { FaAngleRight } from 'react-icons/fa';
 
 function AllJobs() {
   const jobs = useSelector((state) => state.jobs.jobs);
-  // console.log(jobs);
+
   const [search, setSearch] = useState('');
 
   const handleSearch = (e) => {
