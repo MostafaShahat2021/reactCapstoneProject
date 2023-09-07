@@ -4,7 +4,7 @@
 
   <br/>
 
-  <h1><b>ReactCapstoneProject</b></h1>
+  <h1><b>React Capstone Project</b></h1>
   <h2><b>Remotive Jobs</b></h2>
   <p>Remotive jobs is where top talents go to easily access active and fully remote job opportunities from vetted tech companies</p>
 </div>
