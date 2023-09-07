@@ -4,15 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #0041ff;
-  background: linear-gradient(90deg, #0041ff 0%, rgba(0, 19, 255, 0.18) 80%);
-  background: -webkit-linear-gradient(90deg, #0041ff 0%, rgba(0, 19, 255, 0.18) 80%);
-  background: -moz-linear-gradient(90deg, #6486ec 0%, rgba(0, 19, 255, 0.18) 80%);
-  font-family: 'Lato', sans-serif;
-  font-family: 'Roboto', sans-serif;
-}
-
 .App {
   background-color: rgb(81, 130, 221);
   width: 80%;
