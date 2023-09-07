@@ -17,15 +17,29 @@ function JobsDetails() {
         <FaChevronCircleLeft className="FaChevronCircleLeft" />
       </Link>
       <img src={job.company_logo} alt={job.title} className="card-image" />
-      <div className="card-content">
-        <h2 className="card-title">{job.title}</h2>
-        <p className="card-description">{job.company_name}</p>
-        <p className="card-description">{job.job_type}</p>
-        <p className="card-description">{job.candidate_required_location}</p>
-        <p className="card-description">
-          {job.salary || <p>salary is confidential</p>}
-        </p>
-      </div>
+      <ul className="card-content list">
+        <li>
+          {job.title}
+        </li>
+        <li>
+          {job.company_name}
+        </li>
+        <li>
+          {job.job_type}
+        </li>
+        <li>
+          {job.category}
+        </li>
+        <li>
+          {job.tags[0]}
+        </li>
+        <li>
+          {job.publication_date}
+        </li>
+        <li>
+          {job.salary || <span>no salary</span>}
+        </li>
+      </ul>
     </div>
   );
 }

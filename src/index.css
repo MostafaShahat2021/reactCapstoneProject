@@ -146,10 +146,39 @@ span {
 }
 
 .details-card {
-  /* border: 1px solid red; */
   position: relative;
-  margin: 15rem 2rem;
+  /* margin: 15rem 2rem; */
+  /* border: 1px solid red; */
 }
+
+.details-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  /* width: 120%; */
+  margin: 0 auto;
+}
+
+.details-card ul li {
+  padding: 5px;
+  margin: 5px;
+  width: 25%;
+  height: 10%;
+  text-align: center;
+  font-size: small;
+  /* font-weight: bold; */
+}
+
+.list li:nth-child(even) {
+  background-color: rgb(96, 148, 245);
+}
+
+.list li:nth-child(odd) {
+  background-color: rgb(65, 102, 174);
+}
+
 
 .FaAngleRight,
 .FaChevronCircleLeft {
