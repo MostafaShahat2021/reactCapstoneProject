@@ -7,12 +7,11 @@ const initialState = {
   error: null,
 };
 
-const baseUrl = 'https://remotive.com/api/remote-jobs';
+const baseUrl = 'https://remotive.com/api/remote-jobs?limit=100';
 
 export const getJobs = createAsyncThunk('jobs/getJobs', async () => {
   try {
     const res = await axios.get(baseUrl);
-    // return console.log(res.data.jobs);
     return res.data.jobs;
   } catch (error) {
     throw new Error('failed to fetch jobs data');
@@ -29,8 +28,12 @@ const jobsSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(getJobs.fulfilled, (state, action) => {
-        state.status = 'success';
-        state.jobs.concat(action.payload);
+        const jobsList = action.payload;
+        return ({
+          ...state,
+          jobs: jobsList,
+          status: 'success',
+        });
       })
       .addCase(getJobs.rejected, (state, action) => {
         state.status = 'failed';

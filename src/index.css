@@ -1,27 +1,158 @@
-body {
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.App {
+  background-color: rgb(81, 130, 221);
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+.header-container {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.angle-Left {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.left,
+.mic,
+.ger,
+h1,
+h3 {
+  color: #e9e2e2;
+}
+
+.cont {
+  width: 20%;
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.hero {
+  background-color: rgb(65, 102, 174);
+  width: 90%;
+  height: 35vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+span {
+  padding: 1rem;
+}
+
+.search {
+  display: block;
+  width: 50%;
+  padding: 0.5rem;
+  margin: 1rem auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 45%;
+  transition: transform 0.2s;
+}
+
+.blue {
+  background-color: rgb(65, 102, 174);
+}
+
+.light-blue {
+  background-color: rgb(84, 134, 225);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  max-width: 30%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #e9e2e2;
+}
+
+.card-description {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #e9e2e2;
+}
+
+.details-card {
+  position: relative;
+}
+
+.details-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.details-card ul li {
+  padding: 5px;
+  margin: 5px;
+  width: 25%;
+  height: 10%;
+  text-align: center;
+  font-size: small;
+}
+
+.list li:nth-child(even) {
+  background-color: rgb(96, 148, 245);
+}
+
+.list li:nth-child(odd) {
+  background-color: rgb(65, 102, 174);
+}
+
+.FaAngleRight,
+.FaChevronCircleLeft {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #e9e2e2;
 }
