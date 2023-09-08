@@ -132,12 +132,23 @@ span {
 }
 
 .details-card ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
   padding: 5px;
   margin: 5px;
-  width: 25%;
-  height: 10%;
-  text-align: center;
-  font-size: small;
+}
+
+.data {
+  width: 30%;
+  display: block;
+  text-align: left;
+}
+
+.details-card img {
+  display: block;
+  margin: 1rem auto;
 }
 
 .list li:nth-child(even) {
