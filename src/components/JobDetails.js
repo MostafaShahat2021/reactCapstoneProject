@@ -19,25 +19,32 @@ function JobsDetails() {
       <img src={job.company_logo} alt={job.title} className="card-image" />
       <ul className="card-content list">
         <li>
-          {job.title}
+          <span>Job title: </span>
+          <span className="data">{job.title}</span>
         </li>
         <li>
-          {job.company_name}
+          <span>company name: </span>
+          <span className="data">{job.company_name}</span>
         </li>
         <li>
-          {job.job_type}
+          <span>Job type: </span>
+          <span className="data">{job.job_type}</span>
         </li>
         <li>
-          {job.category}
+          <span>Category: </span>
+          <span className="data">{job.category}</span>
         </li>
         <li>
-          {job.tags[0]}
+          <span>Tag: </span>
+          <span className="data">{job.tags[0]}</span>
         </li>
         <li>
-          {job.publication_date}
+          <span>puplication dtae:</span>
+          <span className="data">{job.publication_date}</span>
         </li>
         <li>
-          {job.salary || <span>no salary</span>}
+          <span>Salary: </span>
+          {job.salary || <span>Salary range available upon request</span>}
         </li>
       </ul>
     </div>

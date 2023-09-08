@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios';
 
 const initialState = {
   jobs: [],
@@ -11,8 +11,10 @@ const baseUrl = 'https://remotive.com/api/remote-jobs?limit=100';
 
 export const getJobs = createAsyncThunk('jobs/getJobs', async () => {
   try {
-    const res = await axios.get(baseUrl);
-    return res.data.jobs;
+    const res = await fetch(baseUrl);
+    const data = await res.json();
+    // return console.log(data.jobs);
+    return data.jobs;
   } catch (error) {
     throw new Error('failed to fetch jobs data');
   }

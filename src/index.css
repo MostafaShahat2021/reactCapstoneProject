@@ -6,7 +6,7 @@
 
 .App {
   background-color: rgb(81, 130, 221);
-  width: 80%;
+  width: 90%;
   margin: 1rem auto;
   border-radius: 15px;
   box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
@@ -132,12 +132,23 @@ span {
 }
 
 .details-card ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
   padding: 5px;
   margin: 5px;
-  width: 25%;
-  height: 10%;
-  text-align: center;
-  font-size: small;
+}
+
+.data {
+  width: 30%;
+  display: block;
+  text-align: left;
+}
+
+.details-card img {
+  display: block;
+  margin: 1rem auto;
 }
 
 .list li:nth-child(even) {
