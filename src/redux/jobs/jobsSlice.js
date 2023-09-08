@@ -13,7 +13,6 @@ export const getJobs = createAsyncThunk('jobs/getJobs', async () => {
   try {
     const res = await fetch(baseUrl);
     const data = await res.json();
-    // return console.log(data.jobs);
     return data.jobs;
   } catch (error) {
     throw new Error('failed to fetch jobs data');
