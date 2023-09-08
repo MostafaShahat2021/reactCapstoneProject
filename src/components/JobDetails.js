@@ -6,6 +6,9 @@ import { FaChevronCircleLeft } from 'react-icons/fa';
 function JobsDetails() {
   const jobId = parseInt(window.location.pathname.split('/')[2], 10);
   const job = useSelector((state) => state.jobs.jobs.find((j) => j.id === jobId));
+  const dateStr = job?.publication_date;
+  const date = new Date(dateStr);
+  const formattedDate = date.toLocaleDateString();
 
   if (!job) {
     return <div>Job not found</div>;
@@ -40,11 +43,11 @@ function JobsDetails() {
         </li>
         <li>
           <span>puplication dtae:</span>
-          <span className="data">{job.publication_date}</span>
+          <span className="data">{formattedDate}</span>
         </li>
         <li>
           <span>Salary: </span>
-          {job.salary || <span>Salary range available upon request</span>}
+          {job.salary || <span className="salary">Salary range available upon request</span>}
         </li>
       </ul>
     </div>
